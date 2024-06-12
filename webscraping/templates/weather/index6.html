@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Price Comparator</title>
+  <link rel="stylesheet" href="{% static 'css/style6.css' %}">
+</head>
+<body>
+
+  <div id="header">
+    <a href="../index2">Home</a>
+    <h1>Price Comparator</h1>
+    <a href="../index7">History</a>
+  </div>
+
+  <div id="main-container">
+    <div class="card test2">
+      <h2 style="text-align: center;">Price Comparator</h2>
+      <div class="card-content">
+        <input type="text" class="input-field" id='search' placeholder="Enter product name">
+        <button id="searchButton">Search</button>
+      </div>
+      <div id="results">  </div>
+    </div>
+    
+  </div>
+
+  <script src="{% static 'js/script6.js' %}"></script>
+</body>
+</html>

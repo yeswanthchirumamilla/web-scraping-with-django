@@ -1,0 +1,8 @@
+django
+requests-html
+selenium
+transformers
+torch
+beautifulsoup4
+selenium
+

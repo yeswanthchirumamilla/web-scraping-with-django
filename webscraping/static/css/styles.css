@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(52, 33, 33);
+    position: relative; /* Ensure the body is relative for absolute positioning */
+}
+
+.aco {
+    margin-top: 20px;
+    margin-bottom: 70px; /* Add margin at the bottom */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.grid-container {
+    max-width: 1000px; /* Increase the max-width of the container */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px #000000ee;
+    border: 2px solid white; /* Add white border */
+}
+
+.grid-item::before {
+    content: ' ';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
+    animation: moveLighting 5s infinite linear alternate; /* Adjust animation */
+    z-index: -1; /* Ensure the lighting effect is behind other elements */
+}
+
+.grid-item:hover {
+    transform: scale(1.1); /* Increase size on hover */
+    transition: transform 0.3s ease; /* Add transition effect */
+}
+
+.image {
+    width: 100%; /* Make the image fill the width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    transform-style: unset;
+}
+
+.image-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    transform-style: preserve-3d;
+}
+
+.fa-solid.fa-user {
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: antiquewhite;
+}
+
+@keyframes moveLighting {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}

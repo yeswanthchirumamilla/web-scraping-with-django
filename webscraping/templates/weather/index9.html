@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Search History</title>
+  <link rel="stylesheet" href="{% static 'css/style9.css' %}">
+</head>
+<body>
+
+  <header>
+    <a href="../index5" id="backButton">Back</a>
+    <h1 style="text-align: center;">Weather Search History</h1>
+  </header>
+
+  <main id="main-container" style="text-align: center;">
+    <div class="result-container" id="results">
+      <table id="history-table">
+        <thead id="table-head">
+        </thead>
+        <tbody id="table-body">
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <script src="{% static 'js/script9.js' %}"></script>
+</body>
+</html>

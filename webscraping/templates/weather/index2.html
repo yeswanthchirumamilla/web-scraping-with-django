@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="aco" >
+       <a href="index7"><i class="fa-solid fa-user"></i></a> 
+        <button id="logout" >logout</button>
+    </div>
+    
+    <div class="grid-container">
+        <div class="grid-item card">
+            <a href="index3">
+                <img src="{% static 'images/img1.png' %}" alt="Image 1" class="image">
+                <div class="image-text">DOUBT RESOLVE </div>
+            </a>
+        </div>
+        <div class="grid-item card">
+            <a href="index6">
+                <img src="{% static 'images/img2.png' %}" alt="Image 2" class="image">
+                <div class="image-text">PRICE comparator</div>
+            </a>
+        </div>
+        <div class="grid-item card">
+            <a href="index5">
+                <img src="{% static 'images/img3.png' %}" alt="Image 3" class="image">
+                <div class="image-text">WEATHER data scraper </div>
+            </a>
+        </div>
+        <div class="grid-item card">
+            <a href="index4">
+                <img src="{% static 'images/img4.png' %}" alt="Image 4" class="image">
+                <div class="image-text">IMDB scraper</div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const logoutButton = document.getElementById('logout');
+            logoutButton.addEventListener('click', async () => {
+                try {
+                    const response = await fetch('/logout/', {
+                        method: 'POST',
+                        headers: {
+                            'X-CSRFToken': getCookie('csrftoken')
+                        }
+                    });
+                    if (response.ok) {
+                        window.location.href = '/index';
+                    } else {
+                        throw new Error('Logout failed');
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            });
+
+            // Function to get CSRF token from cookie
+            function getCookie(name) {
+                const value = `; ${document.cookie}`;
+                const parts = value.split(`; ${name}=`);
+                if (parts.length === 2) {
+                    return parts.pop().split(';').shift();
+                }
+                return null;
+            }
+        });
+    </script>
+</body>
+</html>
