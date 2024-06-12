@@ -1,0 +1,35 @@
+.doubt-card {
+    background-color: #f0f0f0; /* Light gray background color */
+    padding: 20px; /* Padding around the card */
+    margin-bottom: 20px; /* Space between cards */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.doubt-card h3 {
+    margin-bottom: 10px; /* Bottom margin for the title */
+    font-size: 20px; /* Increase font size for the title */
+}
+
+.answer-card {
+    margin-top: 10px; /* Top margin for answers */
+    padding: 10px; /* Padding around each answer */
+    background-color: #ffffff; /* White background color */
+    border-radius: 6px; /* Rounded corners for answers */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow to answers */
+}
+
+.answer-card p {
+    margin-bottom: 5px; /* Bottom margin for paragraphs */
+}
+
+.answer-card a {
+    display: block;
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.answer-card a:hover {
+    color: darkblue;
+}

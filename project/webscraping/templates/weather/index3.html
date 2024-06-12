@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOUBT RESOLVE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{% static 'css/style3.css' %}">
+</head>
+<body>
+<div class="google-main-container">
+    <div class="top-nav">
+        <ul>
+            <li><a href="../index2">home</a></li>
+            <li><a href="../index8">history</a></li>
+            <li id="user-profile"></li>
+        </ul>
+    </div>
+    <div class="main">
+        <div class="logo-container">
+            <div class="logo">
+                <h style="font-size: xx-large; font-family:Georgia, 'Times New Roman', Times, serif ;">DOUBT RESOLVE</h>
+            </div>
+            <div class="search">
+                <i class="fas fa-search"></i>
+                <input type="text" name="search" id="search" placeholder="Search you doubt ">
+            </div>
+        </div>
+        <div id="results" class="results-container"></div>
+
+    </div>
+</div>
+<script src="{% static 'js/script3.js' %}"></script>
+</body>
+</html>

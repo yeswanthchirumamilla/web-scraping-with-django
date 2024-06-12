@@ -1,0 +1,35 @@
+#results {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+.history-card {
+    align-self:center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 500px;
+    height: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.history-card h3 {
+    margin-bottom: 5px;
+}
+
+.history-card p {
+    margin-bottom: 5px;
+}
+
+.history-card a {
+    display: block;
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.history-card a:hover {
+    color: darkblue;
+}

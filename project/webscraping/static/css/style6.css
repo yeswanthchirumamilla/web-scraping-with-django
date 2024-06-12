@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("../images/price.jpg");;
+    background-size: 100%;
+  }
+  
+  #header {
+    display: flex;
+    justify-content: space-between;
+    background-color: aliceblue;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  #header h1 {
+    margin: 0;
+  }
+  
+  #header a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: black;
+  }
+  
+  #main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .card.test2 {
+    width: 500px;
+    height: 500px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+    text-align: center;
+  }
+  
+  .card.test2:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 100px rgba(255, 0, 0, 0.6);
+  }
+  
+  .card-content {
+    padding: 20px;
+  }
+  
+  .input-field {
+    width: calc(100% - 40px);
+    padding: 15px; /* Increased padding */
+    margin-bottom: 20px; /* Increased margin */
+    border: 2px solid #007bff; /* Added border */
+    border-radius: 25px; /* Rounded border */
+    box-sizing: border-box;
+    font-size: 16px; /* Increased font size */
+    outline: none; /* Remove outline */
+  }
+  
+  .input-field::placeholder {
+    color: #aaa; /* Placeholder color */
+  }
+  
+  button {
+    width: 50%;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
